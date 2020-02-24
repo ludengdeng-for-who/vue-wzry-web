@@ -1,0 +1,37 @@
+{
+  "id": "1643557",
+  "name": "w'z'r'y",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8739885",
+      "name": "返 回",
+      "font_class": "fanhui",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "5351699",
+      "name": "menu",
+      "font_class": "menu1",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "372210",
+      "name": "cc-menu-circle",
+      "font_class": "cc-menu-circle",
+      "unicode": "e672",
+      "unicode_decimal": 58994
+    },
+    {
+      "icon_id": "6654507",
+      "name": "card-hero",
+      "font_class": "card-hero",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    }
+  ]
+}

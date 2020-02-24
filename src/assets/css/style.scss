@@ -1,0 +1,239 @@
+@import './vasiable';
+.bs{
+  box-sizing: border-box !important;
+}
+html {
+    box-sizing: border-box !important;
+    outline: none;
+  }
+  html {
+    font-size: 13px;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.2em;
+    background-color: #f1f1f1;
+  }
+  a {
+    color: #999;
+  }
+  @each $colorKey, $color in $colors {
+    .text-#{$colorKey} {
+      color: $color;
+    }
+    .bg-#{$colorKey} {
+      background-color: $color;
+    }
+  }
+  @each $var in (left, center, right) {
+    .text-#{$var} {
+      text-align: $var;
+    }
+  }
+  @each $sizeKey, $size in $font-sizes {
+    .fs-#{$sizeKey} {
+      font-size: $size * $base-font-size;
+    }
+  }
+  .font-w{
+    font-weight: 700;
+  }
+  .font-es{
+    white-space: nowrap;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .flex-wrap{
+    flex-wrap: wrap;
+  }
+  .d-flex {
+    display: flex;
+  }
+  .flex-column {
+    flex-direction: column;
+  }
+  @each $key, $value in $flex-jc {
+    .jc-#{$key} {
+      justify-content: $value;
+    }
+  }
+  
+  @each $key, $value in $flex-ai {
+    .ai-#{$key} {
+      align-items: $value;
+    }
+  }
+  
+  .flex-1 {
+    flex: 1;
+  }
+  .flex-grow-1 {
+    flex: 1;
+  }
+  
+  
+  @each $typeKey, $type in $spacing-types {
+    @each $sizeKey, $size in $spacing-sizes {
+      //m-1
+      .#{$typeKey}-#{$sizeKey} {
+        #{$type}: $size * $spacing-base-size;
+      }
+    }
+    @each $sizeKey, $size in $spacing-sizes {
+      .#{$typeKey}x-#{$sizeKey} {
+        #{$type}-left: $size * $spacing-base-size;
+        #{$type}-right: $size * $spacing-base-size;
+      }
+    }
+    @each $sizeKey, $size in $spacing-sizes {
+      .#{$typeKey}y-#{$sizeKey} {
+        #{$type}-top: $size * $spacing-base-size;
+        #{$type}-bottom: $size * $spacing-base-size;
+      }
+    }
+    @each $directionKey, $direction in $spacing-directions {
+      @each $sizeKey, $size in $spacing-sizes {
+        //mt-1 {margin-top:0.25rem}
+        .#{$typeKey}#{$directionKey}-#{$sizeKey} {
+          #{$type}-#{$direction}: $size * $spacing-base-size;
+        }
+      }
+    }
+  }
+  .btn{
+    border: none;
+    border-radius: 0.1538rem;
+    font-size:map-get($map: $font-sizes, $key: sm) * $base-font-size;
+    -webkit-font-smoothing:antialiased;
+  }
+  .nav{
+    .nav-item{
+      border-bottom:3px solid  transparent;
+      padding-bottom: .2rem;
+      &.active{
+        border-bottom: 3px solid  #fff;
+      }
+    }
+    .nav-reserve{
+      border-bottom:3px solid  transparent;
+      padding-bottom: .2rem;
+      &.active{
+        color:map-get($map: $colors, $key: 'primary');
+        border-bottom: 3px solid  map-get($map: $colors, $key: 'paimary')
+      }
+    }
+    
+  }
+  .w-100{
+    width: 100%;
+  }
+  .h-100{
+    height: 100%;
+  }
+
+
+  .sprite{
+    background: url(../images/index.png) no-repeat 0 0;
+    background-size: 28.8462rem;
+    display: inline-block;
+    &-news{
+      width: 1.7692rem;
+      height: 1.5385rem;
+      background-position:63.546% 15.517%;
+    }
+    &-arrow{
+      width: 0.7692rem;
+      height: 0.7692rem;
+      background-position:38.577% 52.076%;
+    }
+    &-story{
+      width: 1.7692rem;
+      height: 1.5385rem;
+      background-position:90.483% 15.614%;
+    }
+    &-shop{
+      width: 1.4615rem;
+      height: 1.6923rem;
+      background-position:36.746% 0.924%;
+    }
+    &-tiyanfu{
+      width: 1.5385rem;
+      height: 1.5385rem;
+      background-position: 10.408% 15.517%;
+    }
+    &-player{
+      width: 1.5385rem;
+      height: 1.6154rem;
+      background-position: 89.733% 1.266%;
+    }
+    &-chuancheng{
+      width: 1.8462rem;
+      height: 1.5385rem;
+      background-position: 36.467% 15.287%;
+    }
+    &-moni{
+      width: 2.3846rem;
+      height: 1.9231rem;
+      background-position: 9.302% 0.813%;
+    }
+    &-wangzhe{
+      width: 1.8462rem;
+      height: 1.8462rem;
+      background-position: 63.3% 0.927%;
+    }
+    &-public{
+      width: 1.8462rem;
+      height: 1.5385rem;
+      background-position: 0 96.207%;
+    }
+    &-banben{
+      width: 1.8462rem;
+      height: 1.8462rem;
+      background-position: 63.3% 0.927%;
+    }
+    &-duiju{
+      width: 1.8462rem;
+      height: 1.8462rem;
+      background-position: 63.3% 0.927%;
+    }
+    &-wuxian{
+      width: 1.8462rem;
+      height: 1.8462rem;
+      background-position: 63.3% 0.927%;
+    }
+    &-chuangyi{
+      width: 1.8462rem;
+      height: 1.8462rem;
+      background-position: 63.3% 0.927%;
+    }
+  }
+  // 'sprite-news','sprite-arrow','sprite-shop','sprite-tiyanfu','sprite-player','sprite-chuancheng',
+  //     'sprite-moni','sprite-wangzhe','sprite-public','sprite-banben','sprite-duiju',
+  //     'sprite-wuxian','sprite-chuangyi'
+  #article{
+    img{
+      width: 100%;
+      height: auto;
+    }
+    iframe{
+      width: 100%;
+      height: auto;
+    }
+    video{
+      width: 100%;
+      height: auto;
+    }
+  }
+  .button{
+    border:none;
+    border-radius: 3px;
+    background-color: #fcfcfc;
+    border: 1px solid #eceef0 ;
+  }
+  .just-border{
+    border-bottom: 1px solid  #ccc;
+  }
